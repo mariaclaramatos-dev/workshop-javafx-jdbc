@@ -4,6 +4,8 @@ module org.example.workshopjavafxjdbc {
     requires java.sql;
     requires java.desktop;
 
+    opens org.example.workshopjavafxjdbc.gui to javafx.fxml;
     opens org.example.workshopjavafxjdbc to javafx.fxml;
+
     exports org.example.workshopjavafxjdbc;
 }
