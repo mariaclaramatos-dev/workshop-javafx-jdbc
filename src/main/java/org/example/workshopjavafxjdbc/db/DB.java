@@ -51,7 +51,7 @@ public class DB {
 			throw new DbException(e.getMessage());
 		}
 	}
-	
+
 	public static void closeStatement(Statement st) {
 		if (st != null) {
 			try {
