@@ -10,13 +10,16 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Main extends Application {
+
+    private static Scene mainScene;
+
     @Override
     public void start(Stage stage) {
         try {
             ScrollPane scrollPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gui/MainView.fxml")));
 
-            Scene scene = new Scene(scrollPane);
-            stage.setScene(scene);
+            mainScene = new Scene(scrollPane);
+            stage.setScene(mainScene);
             stage.show();
 
             scrollPane.setFitToHeight(true);
@@ -25,5 +28,9 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static Scene getMainScene(){
+        return mainScene;
     }
 }
